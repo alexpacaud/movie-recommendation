@@ -1,9 +1,12 @@
 <!doctype html>
 <title>Movie Recommendation</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <div class=page>
   <h1>{{ page_title }}</h1>
   <Hello></Hello>
   <ul>
-    No item for now
+    {% for index, movie in my_movies_rated.iterrows() %}
+    <li>{{movie.movieId | int}}</li>
+    {% endfor %}
   </ul>
 </div>
